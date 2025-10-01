@@ -10,7 +10,7 @@
         map = <
         //  COL00    COL01    COL02    COL03    COL04    COL05    COL06    COL07    COL08    COL09    COL10    COL11    COL12    COL13    COL14    COL15    COL16    COL17    COL18    COL19    COL20    COL21
         //  RC(0,00) RC(0,01) RC(0,02) RC(0,03) RC(0,04) RC(0,05) RC(0,06) RC(0,07) RC(0,08) RC(0,09) RC(0,10) RC(0,11) RC(0,12) RC(0,13) RC(0,14) RC(0,15) RC(0,16) RC(0,17) RC(0,18) RC(0,19) RC(0,20) RC(0,21)              // ROW
-                     RC(0,01) RC(0,02) RC(0,03) RC(0,04) RC(0,05) RC(0,06) RC(0,07) RC(0,14)                                                       RC(0,15) RC(0,16) RC(0,17) RC(0,18) RC(0,19) RC(0,20)                       // ROW0
+                     RC(0,01) RC(0,02) RC(0,03) RC(0,04) RC(0,05) RC(0,06) RC(0,07)                                                                RC(0,15) RC(0,16) RC(0,17) RC(0,18) RC(0,19) RC(0,20)                       // ROW0
             RC(1,00) RC(1,01) RC(1,02) RC(1,03) RC(1,04) RC(1,05) RC(1,06)                   RC(1,09)                   RC(1,12)          RC(1,14) RC(1,15) RC(1,16) RC(1,17) RC(1,18) RC(1,19) RC(1,20)                       // ROW1
             RC(2,00) RC(2,01) RC(2,02) RC(2,03) RC(2,04) RC(2,05) RC(2,06)                   RC(2,09)                   RC(2,12)          RC(2,14) RC(2,15) RC(2,16) RC(2,17) RC(2,18) RC(2,19) RC(2,20) RC(2,21)              // ROW2
                      RC(3,01) RC(3,02) RC(3,03) RC(3,04) RC(3,05) RC(3,06) RC(3,07)          RC(3,09)                   RC(3,12)          RC(3,14) RC(3,15) RC(3,16) RC(3,17) RC(3,18) RC(3,19) RC(3,20)                       // ROW3
@@ -26,16 +26,16 @@
         diode-direction = "col2row";
 
         col-gpios
-            = <&pro_micro 1 GPIO_ACTIVE_HIGH>   // COL0
-            , <&pro_micro 2 GPIO_ACTIVE_HIGH>   // COL1
-            , <&pro_micro 4 GPIO_ACTIVE_HIGH>   // COL2
-            , <&pro_micro 5 GPIO_ACTIVE_HIGH>   // COL3
-            , <&pro_micro 6 GPIO_ACTIVE_HIGH>   // COL4
-            , <&pro_micro 7 GPIO_ACTIVE_HIGH>   // COL5
-            , <&pro_micro 9 GPIO_ACTIVE_HIGH>   // COL6
-            , <&pro_micro 10 GPIO_ACTIVE_HIGH>  // COL7
-            , <&pro_micro 11 GPIO_ACTIVE_HIGH>  // COL8
-            , <&pro_micro 12 GPIO_ACTIVE_HIGH>  // COL9
+            = <&pro_micro 1 GPIO_ACTIVE_HIGH>   // COL00
+            , <&pro_micro 2 GPIO_ACTIVE_HIGH>   // COL01
+            , <&pro_micro 4 GPIO_ACTIVE_HIGH>   // COL02
+            , <&pro_micro 5 GPIO_ACTIVE_HIGH>   // COL03
+            , <&pro_micro 6 GPIO_ACTIVE_HIGH>   // COL04
+            , <&pro_micro 7 GPIO_ACTIVE_HIGH>   // COL05
+            , <&pro_micro 9 GPIO_ACTIVE_HIGH>   // COL06
+            , <&pro_micro 10 GPIO_ACTIVE_HIGH>  // COL07
+            , <&pro_micro 11 GPIO_ACTIVE_HIGH>  // COL08
+            , <&pro_micro 12 GPIO_ACTIVE_HIGH>  // COL09
                                                 // COL10
                                                 // COL11
             , <&pro_micro 21 GPIO_ACTIVE_HIGH>  // COL12
@@ -69,5 +69,16 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,physical-layout = &physical_layout0;
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer
+            bindings = <
+                //  COL00     COL01     COL02     COL03     COL04     COL05     COL06     COL07     COL08     COL09     COL10     COL11     COL12     COL13     COL14     COL15     COL16     COL17     COL18     COL19     COL20     COL21
+                              &kp TILDE &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6
+            >;
+        };
     };
 };
