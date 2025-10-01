@@ -6,4 +6,4 @@
 # `artifact-name` to assign a name to distinguish build outputs from each other:
 #
 board: [ "rpi_pico" ]
-shield: [ "terminus_est" ]
+shield: [ "terminus-est" ]
