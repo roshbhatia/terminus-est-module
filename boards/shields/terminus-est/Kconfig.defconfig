@@ -1,4 +1,4 @@
-if SHIELD_TERMNUS_EST
+if SHIELD_TERMINUS_EST
 
 config ZMK_KEYBOARD_NAME
     default "terminus-est"
