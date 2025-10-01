@@ -1,6 +1,6 @@
 if SHIELD_TERMNUS_EST
 
 config ZMK_KEYBOARD_NAME
-    default "terminus_est"
+    default "terminus-est"
 
 endif

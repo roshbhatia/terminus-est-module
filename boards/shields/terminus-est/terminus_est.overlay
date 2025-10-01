@@ -1,0 +1,54 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    matrix_transform0: keymap_transform0 {
+        compatible = "zmk,matrix-transform";
+        columns = <22>; // Length of the "col-gpios" array (COL0-COL9, COL12-COL21)
+        rows = <6>;    // Length of the "row-gpios" array
+        map = <
+        //  COL00    COL01    COL02    COL03    COL04    COL05    COL06    COL07    COL08    COL09    COL10    COL11    COL12    COL13    COL14    COL15    COL16    COL17    COL18    COL19    COL20    COL21
+        //  RC(0,00) RC(0,01) RC(0,02) RC(0,03) RC(0,04) RC(0,05) RC(0,06) RC(0,07) RC(0,08) RC(0,09) RC(0,10) RC(0,11) RC(0,12) RC(0,13) RC(0,14) RC(0,15) RC(0,16) RC(0,17) RC(0,18) RC(0,19) RC(0,20) RC(0,21)     // ROW
+                     RC(0,01) RC(0,02) RC(0,03) RC(0,04) RC(0,05) RC(0,06) RC(0,07) RC(0,14)                                                       RC(0,15) RC(0,16) RC(0,17) RC(0,18) RC(0,19) RC(0,20)                       // ROW0
+            RC(0,00) RC(0,01) RC(0,02) RC(0,03) RC(0,04) RC(0,05) RC(0,06)                   RC(0,09)                   RC(0,12)          RC(0,14) RC(0,15) RC(0,16) RC(0,17) RC(0,18) RC(0,19) RC(0,20)                       // ROW1
+            RC(0,00) RC(0,01) RC(0,02) RC(0,03) RC(0,04) RC(0,05) RC(0,06)                   RC(0,09)                   RC(0,12)          RC(0,14) RC(0,15) RC(0,16) RC(0,17) RC(0,18) RC(0,19) RC(0,20) RC(0,21)              // ROW2
+
+        >;
+    };
+
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        wakeup-source;
+        diode-direction = "col2row";
+
+        col-gpios
+            = <&pro_micro 1 GPIO_ACTIVE_HIGH>   // COL0
+            , <&pro_micro 2 GPIO_ACTIVE_HIGH>   // COL1
+            , <&pro_micro 4 GPIO_ACTIVE_HIGH>   // COL2
+            , <&pro_micro 5 GPIO_ACTIVE_HIGH>   // COL3
+            , <&pro_micro 6 GPIO_ACTIVE_HIGH>   // COL4
+            , <&pro_micro 7 GPIO_ACTIVE_HIGH>   // COL5
+            , <&pro_micro 9 GPIO_ACTIVE_HIGH>   // COL6
+            , <&pro_micro 10 GPIO_ACTIVE_HIGH>  // COL7
+            , <&pro_micro 11 GPIO_ACTIVE_HIGH>  // COL8
+            , <&pro_micro 12 GPIO_ACTIVE_HIGH>  // COL9
+            , <&pro_micro 21 GPIO_ACTIVE_HIGH>  // COL12
+            , <&pro_micro 22 GPIO_ACTIVE_HIGH>  // COL13
+            , <&pro_micro 24 GPIO_ACTIVE_HIGH>  // COL14
+            , <&pro_micro 25 GPIO_ACTIVE_HIGH>  // COL15
+            , <&pro_micro 26 GPIO_ACTIVE_HIGH>  // COL16
+            , <&pro_micro 27 GPIO_ACTIVE_HIGH>  // COL17
+            , <&pro_micro 29 GPIO_ACTIVE_HIGH>  // COL18
+            , <&pro_micro 31 GPIO_ACTIVE_HIGH>  // COL19
+            , <&pro_micro 32 GPIO_ACTIVE_HIGH>  // COL20
+            , <&pro_micro 34 GPIO_ACTIVE_HIGH>  // COL21
+            ;
+
+        row-gpios
+            = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW0
+            , <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW1
+            , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW2
+            , <&pro_micro 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW3
+            , <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW4
+            , <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW5
+            ;
+    };
