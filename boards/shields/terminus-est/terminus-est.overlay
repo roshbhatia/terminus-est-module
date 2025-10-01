@@ -89,10 +89,10 @@
         fn_layer {
             bindings = <
             //  COL00     COL01     COL02     COL03     COL04     COL05     COL06     COL07     COL08     COL09     COL10     COL11     COL12     COL13     COL14     COL15     COL16     COL17     COL18     COL19     COL20     COL21     // ROW
-                          &trans    &trans    &trans    &trans    &trans    &trans    &trans                                                                &trans    &trans    &trans    &trans    &trans    &trans    &trans              // ROW0
-                &trans    &trans    &trans    &trans    &trans    &trans    &trans                        &trans                        &trans              &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    // ROW1
-                &trans    &trans    &trans    &trans    &trans    &trans    &trans                        &trans                        &trans              &kp UP    &kp LEFT  &kp DOWN  &kp RIGHT &trans    &trans    &trans              // ROW2
-                &trans    &trans    &trans    &trans    &trans    &trans    &trans                        &trans                        &trans              &trans    &trans    &trans    &trans    &trans    &trans    &trans              // ROW3
+                   &kp C_AL_LOCK    &trans    &trans    &trans    &trans    &trans    &trans                                                                &trans    &trans    &trans    &trans    &trans    &trans    &trans              // ROW0
+                &trans    &trans    &trans    &trans    &trans    &trans    &trans                      &kp C_RESET                   &kp C_RESET           &trans    &trans    &trans    &trans    &kp C_PP  &trans    &trans    &trans    // ROW1
+                &trans    &trans    &trans    &trans    &trans   &kp C_NEXT &trans                        &trans                        &trans              &kp UP    &kp LEFT  &kp DOWN  &kp RIGHT &trans    &trans    &trans              // ROW2
+                &trans    &trans    &trans    &trans    &trans    &trans   &kp C_PREV                     &trans                        &trans             &kp C_PREV &trans    &trans    &trans    &trans    &trans    &trans              // ROW3
                 &trans    &trans                                  &trans    &trans    &trans                                                      &trans    &trans    &trans                                  &trans    &trans              // ROW4
                                                                             &trans    &trans    &trans    &trans                                  &trans    &trans    &trans                                                                // ROW5
             >;
