@@ -3,6 +3,5 @@ id: terminus-est
 name: terminus-est
 type: shield
 url: https://github.com/roshbhatia/terminus-est
-requires: [pro_micro]
 features:
   - keys
