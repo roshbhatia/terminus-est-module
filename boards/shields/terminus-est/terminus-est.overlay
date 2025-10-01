@@ -36,27 +36,27 @@
             , <&gpio0 7 GPIO_ACTIVE_HIGH>   // COL7 - GP7
             , <&gpio0 8 GPIO_ACTIVE_HIGH>   // COL8 - GP8
             , <&gpio0 9 GPIO_ACTIVE_HIGH>   // COL9 - GP9
-                                            // COL10
-                                            // COL11
-            , <&gpio0 10 GPIO_ACTIVE_HIGH>  // COL12 - GP10
-            , <&gpio0 11 GPIO_ACTIVE_HIGH>  // COL13 - GP11
-            , <&gpio0 12 GPIO_ACTIVE_HIGH>  // COL14 - GP12
-            , <&gpio0 13 GPIO_ACTIVE_HIGH>  // COL15 - GP13
-            , <&gpio0 14 GPIO_ACTIVE_HIGH>  // COL16 - GP14
-            , <&gpio0 15 GPIO_ACTIVE_HIGH>  // COL17 - GP15
-            , <&gpio0 16 GPIO_ACTIVE_HIGH>  // COL18 - GP16
-            , <&gpio0 17 GPIO_ACTIVE_HIGH>  // COL19 - GP17
-            , <&gpio0 18 GPIO_ACTIVE_HIGH>  // COL20 - GP18
-            , <&gpio0 19 GPIO_ACTIVE_HIGH>  // COL21 - GP19
+                                            // COL10 - not connected
+                                            // COL11 - not connected
+            , <&gpio0 17 GPIO_ACTIVE_HIGH>  // COL12 - GP17
+            , <&gpio0 18 GPIO_ACTIVE_HIGH>  // COL13 - GP18
+            , <&gpio0 19 GPIO_ACTIVE_HIGH>  // COL14 - GP19
+            , <&gpio0 20 GPIO_ACTIVE_HIGH>  // COL15 - GP20
+            , <&gpio0 21 GPIO_ACTIVE_HIGH>  // COL16 - GP21
+            , <&gpio0 22 GPIO_ACTIVE_HIGH>  // COL17 - GP22
+            , <&gpio0 26 GPIO_ACTIVE_HIGH>  // COL18 - GP26
+                                            // COL19 - not connected
+            , <&gpio0 27 GPIO_ACTIVE_HIGH>  // COL20 - GP27
+            , <&gpio0 28 GPIO_ACTIVE_HIGH>  // COL21 - GP28
             ;
 
         row-gpios
-            = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW0 - GP20
-            , <&gpio0 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW1 - GP21
-            , <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW2 - GP22
-            , <&gpio0 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW3 - GP26
-            , <&gpio0 27 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW4 - GP27
-            , <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW5 - GP28
+            = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW0 - GP10
+            , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW1 - GP11
+            , <&gpio0 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW2 - GP12
+            , <&gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW3 - GP13
+            , <&gpio0 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW4 - GP15
+            , <&gpio0 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW5 - GP16
             ;
     };
 
